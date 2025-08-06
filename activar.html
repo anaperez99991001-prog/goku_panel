@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Activar HWID - Panel GOKU</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-4">
+    <h2>Activar Nuevo HWID</h2>
+    <form method="POST">
+        <div class="mb-3">
+            <label>HWID</label>
+            <input type="text" name="hwid" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label>Nombre del Cliente</label>
+            <input type="text" name="cliente" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label>Duración</label>
+            <select name="dias" class="form-control">
+                <option value="1">1 día (prueba)</option>
+                <option value="7">7 días</option>
+                <option value="30">30 días</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Activar HWID</button>
+        <a href="{{ url_for('dashboard') }}" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>
+</body>
+</html>
